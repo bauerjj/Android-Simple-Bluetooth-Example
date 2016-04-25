@@ -1,6 +1,8 @@
 # Android-Simple-Bluetooth-Example
 Simple Android Bluetooth example to turn on/off radio and to view and connect with devices. Has associated code to connect to an Arduino.
 
+![](http://mcuhq.com/uploads/486f6211acf839e.JPG)
+
 This is a simple demo app that creates buttons to toggle ON/OFF the bluetooth radio, view connected devices, and to discover new bluetooth enabled devices.
 A checkbox and status strings provide functionality to communicate with an embedded microcontroller such as an Arduino. You can find the Arduino gist here: https://gist.github.com/mcuhq/424442ed08647a26652f9fe0736bfa28
 

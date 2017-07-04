@@ -7,8 +7,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -75,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         mDevicesListView.setAdapter(mBTArrayAdapter); // assign model to view
         mDevicesListView.setOnItemClickListener(mDeviceClickListener);
 
-
+        // Ask for location permission if not already allowed
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
 
 
         mHandler = new Handler(){
@@ -308,21 +313,21 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             byte[] buffer = new byte[1024];  // buffer store for the stream
             int bytes; // bytes returned from read()
-
             // Keep listening to the InputStream until an exception occurs
             while (true) {
                 try {
                     // Read from the InputStream
-                    bytes = mmInStream.read(buffer);
+                    bytes = mmInStream.available();
                     if(bytes != 0) {
-                        SystemClock.sleep(100);
-                        mmInStream.read(buffer);
+                        SystemClock.sleep(100); //pause and wait for rest of data. Adjust this depending on your sending speed.
+                        bytes = mmInStream.available(); // how many bytes are ready to be read?
+                        bytes = mmInStream.read(buffer, 0, bytes); // record how many bytes we actually read
+                        mHandler.obtainMessage(MESSAGE_READ, bytes, -1, buffer)
+                                .sendToTarget(); // Send the obtained bytes to the UI activity
                     }
-                    // Send the obtained bytes to the UI activity
-
-                    mHandler.obtainMessage(MESSAGE_READ, bytes, -1, buffer)
-                            .sendToTarget();
                 } catch (IOException e) {
+                    e.printStackTrace();
+
                     break;
                 }
             }

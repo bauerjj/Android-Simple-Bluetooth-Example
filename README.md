@@ -1,4 +1,7 @@
 # Android-Simple-Bluetooth-Example
+
+<img src="Logotype primary.png" width="60%" height="60%" />
+
 Simple Android Bluetooth example to turn on/off radio and to view and connect with devices. Has associated code to connect to an Arduino.
 For a complete tutorial write-up, please see here: http://mcuhq.com/27/simple-android-bluetooth-application-with-arduino-example
 

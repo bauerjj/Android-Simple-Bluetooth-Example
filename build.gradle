@@ -18,6 +18,19 @@ allprojects {
     }
 }
 
+android {
+    lintOptions {
+        abortOnError false
+    }
+}
+
+test {
+    testLogging {
+        events "failed"
+        exceptionFormat "short"
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

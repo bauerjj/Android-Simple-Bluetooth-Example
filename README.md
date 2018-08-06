@@ -12,6 +12,7 @@ http://mcuhq.com/27/simple-android-bluetooth-application-with-arduino-example
 <p align="center">
 <img src="logo.png" width="35%" height="35%" />
 </p>
+
 ## Introduction
 
 This is a simple demo app that creates buttons to toggle ON/OFF the bluetooth radio, view connected devices, and to discover new bluetooth enabled devices. A checkbox and status strings provide functionality to communicate with an embedded microcontroller such as an Arduino. You don't necessarily need to connect an Arduino to still have a functioning phone application. The connected device MUST abide by the Serial Port Profile (SPP). Other complex profiles are not supported with this example and will fail to connect. 

@@ -10,7 +10,7 @@ For a complete tutorial write-up, please see here:
 
 http://mcuhq.com/27/simple-android-bluetooth-application-with-arduino-example
 
-<img src="logo.png" width="70%" height="70%" />
+<img src="logo.png" width="25%" height="25%" />
 
 ## Introduction
 

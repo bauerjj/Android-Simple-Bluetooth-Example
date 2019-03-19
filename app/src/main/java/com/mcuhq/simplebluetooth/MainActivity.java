@@ -221,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void listPairedDevices(View view){
+        mBTArrayAdapter.clear();
         mPairedDevices = mBTAdapter.getBondedDevices();
         if(mBTAdapter.isEnabled()) {
             // put it's one to the adapter
@@ -357,18 +358,4 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException e) { }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

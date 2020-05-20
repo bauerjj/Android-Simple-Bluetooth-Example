@@ -1,5 +1,6 @@
 package com.mcuhq.simplebluetooth;
 
+import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;

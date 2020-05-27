@@ -11,6 +11,7 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mHandler = new Handler(){
-            public void handleMessage(android.os.Message msg){
+            public void handleMessage(Message msg){
                 if(msg.what == MESSAGE_READ){
                     String readMessage = null;
                     try {
@@ -233,7 +234,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private AdapterView.OnItemClickListener mDeviceClickListener = new AdapterView.OnItemClickListener() {
-        public void onItemClick(AdapterView<?> av, View v, int arg2, long arg3) {
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
             if(!mBTAdapter.isEnabled()) {
                 Toast.makeText(getBaseContext(), "Bluetooth not on", Toast.LENGTH_SHORT).show();
@@ -242,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
 
             mBluetoothStatus.setText("Connecting...");
             // Get the device MAC address, which is the last 17 chars in the View
-            String info = ((TextView) v).getText().toString();
+            String info = ((TextView) view).getText().toString();
             final String address = info.substring(info.length() - 17);
             final String name = info.substring(0,info.length() - 17);
 

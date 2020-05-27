@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mHandler = new Handler(){
+            @Override
             public void handleMessage(Message msg){
                 if(msg.what == MESSAGE_READ){
                     String readMessage = null;
@@ -234,6 +235,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private AdapterView.OnItemClickListener mDeviceClickListener = new AdapterView.OnItemClickListener() {
+        @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
             if(!mBTAdapter.isEnabled()) {
@@ -250,6 +252,7 @@ public class MainActivity extends AppCompatActivity {
             // Spawn a new thread to avoid blocking the GUI one
             new Thread()
             {
+                @Override
                 public void run() {
                     boolean fail = false;
 

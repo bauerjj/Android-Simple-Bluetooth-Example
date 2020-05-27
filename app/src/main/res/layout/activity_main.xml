@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Toggle LED"
-            android:id="@+id/checkboxLED1"
+            android:id="@+id/checkbox_led_1"
             android:layout_marginTop="10dp"
             android:checked="false"
             android:scaleX="1.7"
@@ -42,7 +42,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="&lt;Read Buffer>"
-                android:id="@+id/readBuffer" />
+                android:id="@+id/read_buffer" />
         </LinearLayout>
 
         <LinearLayout
@@ -63,7 +63,7 @@
                 android:layout_weight="0.9"
 
                 android:text="&lt;Bluetooth Status>"
-                android:id="@+id/bluetoothStatus"
+                android:id="@+id/bluetooth_status"
                 android:ellipsize="end"
                 android:maxLines="1" />
         </LinearLayout>
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Show paired Devices"
-            android:id="@+id/PairedBtn" />
+            android:id="@+id/paired_btn" />
 
         <Button
             android:layout_width="match_parent"
@@ -95,7 +95,7 @@
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/devicesListView"
+            android:id="@+id/devices_list_view"
             android:choiceMode="singleChoice" />
 
     </LinearLayout>

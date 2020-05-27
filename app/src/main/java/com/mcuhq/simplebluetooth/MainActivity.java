@@ -65,18 +65,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mBluetoothStatus = (TextView)findViewById(R.id.bluetoothStatus);
-        mReadBuffer = (TextView) findViewById(R.id.readBuffer);
+        mBluetoothStatus = (TextView)findViewById(R.id.bluetooth_status);
+        mReadBuffer = (TextView) findViewById(R.id.read_buffer);
         mScanBtn = (Button)findViewById(R.id.scan);
         mOffBtn = (Button)findViewById(R.id.off);
         mDiscoverBtn = (Button)findViewById(R.id.discover);
-        mListPairedDevicesBtn = (Button)findViewById(R.id.PairedBtn);
-        mLED1 = (CheckBox)findViewById(R.id.checkboxLED1);
+        mListPairedDevicesBtn = (Button)findViewById(R.id.paired_btn);
+        mLED1 = (CheckBox)findViewById(R.id.checkbox_led_1);
 
         mBTArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         mBTAdapter = BluetoothAdapter.getDefaultAdapter(); // get a handle on the bluetooth radio
 
-        mDevicesListView = (ListView)findViewById(R.id.devicesListView);
+        mDevicesListView = (ListView)findViewById(R.id.devices_list_view);
         mDevicesListView.setAdapter(mBTArrayAdapter); // assign model to view
         mDevicesListView.setOnItemClickListener(mDeviceClickListener);
 

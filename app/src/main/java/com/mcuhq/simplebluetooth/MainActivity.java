@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     // #defines for identifying shared types between calling functions
     private final static int REQUEST_ENABLE_BT = 1; // used to identify adding bluetooth names
-    private final static int MESSAGE_READ = 2; // used in bluetooth handler to identify message update
+    public final static int MESSAGE_READ = 2; // used in bluetooth handler to identify message update
     private final static int CONNECTING_STATUS = 3; // used in bluetooth handler to identify message status
 
     // GUI Components
@@ -278,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     if(fail == false) {
-                        mConnectedThread = new ConnectedThread(mBTSocket);
+                        mConnectedThread = new ConnectedThread(mBTSocket, mHandler);
                         mConnectedThread.start();
 
                         mHandler.obtainMessage(CONNECTING_STATUS, 1, -1, name)
@@ -299,13 +299,15 @@ public class MainActivity extends AppCompatActivity {
         return  device.createRfcommSocketToServiceRecord(BTMODULEUUID);
     }
 
-    private class ConnectedThread extends Thread {
+    public class ConnectedThread extends Thread {
         private final BluetoothSocket mmSocket;
         private final InputStream mmInStream;
         private final OutputStream mmOutStream;
+        private final Handler mHandler;
 
-        public ConnectedThread(BluetoothSocket socket) {
+        public ConnectedThread(BluetoothSocket socket, Handler handler) {
             mmSocket = socket;
+            mHandler = handler;
             InputStream tmpIn = null;
             OutputStream tmpOut = null;
 
@@ -333,7 +335,7 @@ public class MainActivity extends AppCompatActivity {
                         SystemClock.sleep(100); //pause and wait for rest of data. Adjust this depending on your sending speed.
                         bytes = mmInStream.available(); // how many bytes are ready to be read?
                         bytes = mmInStream.read(buffer, 0, bytes); // record how many bytes we actually read
-                        mHandler.obtainMessage(MESSAGE_READ, bytes, -1, buffer)
+                        mHandler.obtainMessage(MainActivity.MESSAGE_READ, bytes, -1, buffer)
                                 .sendToTarget(); // Send the obtained bytes to the UI activity
                     }
                 } catch (IOException e) {

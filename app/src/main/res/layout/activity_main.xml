@@ -84,7 +84,7 @@
             android:text="Bluetooth ON"
             android:id="@+id/scan"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/off" />
+            android:layout_toLeftOf="@+id/off" />
 
         <Button
             android:layout_width="match_parent"
@@ -101,7 +101,7 @@
             android:text="Show paired Devices"
             android:id="@+id/PairedBtn"
             android:layout_below="@+id/scan"
-            android:layout_toStartOf="@+id/discover" />
+            android:layout_toLeftOf="@+id/discover" />
 
         <Button
             android:layout_width="match_parent"

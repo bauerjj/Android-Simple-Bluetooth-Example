@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Simple Bluetooth</string>
+    <string name="BTconnFail">Connection Failed</string>
 </resources>

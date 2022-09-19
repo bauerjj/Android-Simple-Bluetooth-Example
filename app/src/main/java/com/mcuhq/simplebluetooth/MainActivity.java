@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     if(msg.arg1 == 1)
                         mBluetoothStatus.setText("Connected to Device: " + msg.obj);
                     else
-                        mBluetoothStatus.setText("Connection Failed");
+                        mBluetoothStatus.setText(getString(R.string.BTconnFail));
                 }
             }
         };

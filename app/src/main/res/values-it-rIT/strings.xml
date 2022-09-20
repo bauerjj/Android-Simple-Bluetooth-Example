@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="BTEnable">Bluetooth abilitato</string>
+    <string name="sBTstaNF">Stato: Bluetooth non trovato</string>
+    <string name="sBTdevNF">Dispositivo Bluetooth non trovato!</string>
+    <string name="sBTturON">Bluetooth è stato acceso</string>
+    <string name="BTisON">Il bluetooth è già acceso</string>
+    <string name="sEnabled">Abilitato</string>
+    <string name="sDisabled">Disabilitato</string>
+    <string name="BTConnected">"Connesso al dispositivo: "</string>
+    <string name="sBTdisabl">Il bluetooth è disabilitato</string>
+    <string name="BTturOff">Il bluetooth è stato spento</string>
+    <string name="DisStart">Ricerca in corso…</string>
+    <string name="BTnotOn">Il bluetooth non è acceso</string>
+    <string name="cConnet">Connessione in corso…</string>
+    <string name="ErrSockCrea">Creazione del Socket non riuscita</string>
+    <string name="toggle_led">Commuta LED</string>
+    <string name="lt_read_buffer">Buffer di lettura</string>
+    <string name="status">"Stato: "</string>
+    <string name="lt_bluetooth_status">Stato del Bluetooth</string>
+    <string name="bluetooth_on">Bluetooth ON</string>
+    <string name="bluetooth_off">Bluetooth OFF</string>
+    <string name="show_paired_devices">Dispositivi associati</string>
+    <string name="rx">RX:</string>
+    <string name="discover_new_devices">Ricerca dispositivi disponibili</string>
+    <string name="sConnFailF">Connessione %s non riuscita</string>
+    <string name="DisStop">Ricerca annullata</string>
+    <string name="BTisOff">Bluetooth è già spento</string>
+    <string name="BTconnFail">Connessione non riuscita</string>
+</resources>

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ErrArrAdp">Errore: Array Adapter è nullo!</string>
     <string name="BTEnable">Bluetooth abilitato</string>
-    <string name="BTstaNF">Stato: Bluetooth non trovato</string>
+    <string name="sBTstaNF">Stato: Bluetooth non trovato</string>
     <string name="sBTdevNF">Dispositivo Bluetooth non trovato!</string>
-    <string name="sBTturON">Accensione Bluetooth in corso</string>
+    <string name="sBTturON">Bluetooth è stato acceso</string>
     <string name="BTisON">Il bluetooth è già acceso</string>
     <string name="sEnabled">Abilitato</string>
     <string name="sDisabled">Disabilitato</string>
-    <string name="sConnected">"Connesso al dispositivo: "</string>
-    <string name="sConnFail">Connessione non riuscita</string>
+    <string name="BTConnected">"Connesso al dispositivo: "</string>
     <string name="sBTdisabl">Il bluetooth è disabilitato</string>
     <string name="BTturOff">Il bluetooth è stato spento</string>
     <string name="DisStart">Ricerca in corso…</string>
@@ -24,7 +22,7 @@
     <string name="bluetooth_off">Bluetooth OFF</string>
     <string name="show_paired_devices">Dispositivi associati</string>
     <string name="rx">RX:</string>
-    <string name="discover_new_devices">Dispositivi disponibili</string>
+    <string name="discover_new_devices">Ricerca dispositivi disponibili</string>
     <string name="sConnFailF">Connessione %s non riuscita</string>
     <string name="DisStop">Ricerca annullata</string>
     <string name="BTisOff">Bluetooth è già spento</string>

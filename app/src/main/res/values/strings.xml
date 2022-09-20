@@ -1,4 +1,23 @@
 <resources>
-    <string name="app_name">Simple Bluetooth</string>
+    <string name="app_name" translatable="false">Simple Bluetooth</string>
     <string name="BTconnFail">Connection Failed</string>
+    <string name="BTConnected">Connected to Device: </string>
+    <string name="sBTdevNF">"Bluetooth device not found!"</string>
+    <string name="sBTstaNF">Status: Bluetooth not found</string>
+    <string name="BTEnable">Bluetooth enabled</string>
+    <string name="sBTturON">Bluetooth turned on</string>
+    <string name="BTisON">Bluetooth is already on</string>
+    <string name="sEnabled">Enabled</string>
+    <string name="sDisabled">Disabled</string>
+    <string name="sBTdisabl">Bluetooth disabled</string>
+    <string name="BTnotOn">Bluetooth not on</string>
+    <string name="lt_bluetooth_status">Bluetooth status</string>
+    <string name="BTturOff">Bluetooth turned off</string>
+    <string name="cConnet">Connecting…</string>
+    <string name="ErrSockCrea">Socket creation failed</string>
+    <string name="DisStart">Discovery started</string>
+    <string name="show_paired_devices">Show Paired Devices</string>
+    <string name="DisStop">Discovery stopped</string>
+    <string name="status">"Status: "</string>
+    <string name="discover_new_devices">Discover new device</string>
 </resources>

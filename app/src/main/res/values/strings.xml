@@ -18,6 +18,11 @@
     <string name="DisStart">Discovery started</string>
     <string name="show_paired_devices">Show Paired Devices</string>
     <string name="DisStop">Discovery stopped</string>
-    <string name="status">"Status: "</string>
+    <string name="status">"Status:"</string>
     <string name="discover_new_devices">Discover new device</string>
+    <string name="toggle_led">Toggle LED</string>
+    <string name="rx" translatable="false">RX:</string>
+    <string name="lt_read_buffer">&lt;Read Buffer></string>
+    <string name="bluetooth_on">Bluetooth ON</string>
+    <string name="bluetooth_off">Bluetooth OFF</string>
 </resources>

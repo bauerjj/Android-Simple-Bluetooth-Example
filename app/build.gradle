@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.mcuhq.simplebluetooth"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 23
         versionCode 29
         versionName "1.0"
     }
